@@ -7,7 +7,7 @@ export default <Button<'base'>>{
     style: 'DANGER',
   },
 
-  exec: ({ interaction }) => {
-    interaction.reply('Yeeaaaaah !');
+  exec: async ({ interaction }) => {
+    await interaction.reply('Yeeaaaaah !');
   },
 };

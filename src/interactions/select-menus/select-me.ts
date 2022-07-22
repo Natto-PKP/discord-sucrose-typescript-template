@@ -14,7 +14,7 @@ export default <SelectMenu>{
     ],
   },
 
-  exec: ({ interaction }) => {
-    interaction.reply('I LOVE FERRET !!!');
+  exec: async ({ interaction }) => {
+    await interaction.reply('I LOVE FERRET !!!');
   },
 };

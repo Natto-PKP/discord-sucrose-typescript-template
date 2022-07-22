@@ -17,7 +17,7 @@
   "homepage": "https://github.com/Natto-PKP/discord-sucrose-typescript-template#readme",
   "dependencies": {
     "discord-sucrose": "^4.3.3",
-    "discord.js": "^13.8.0",
+    "discord.js": "^14.0.3",
     "dotenv": "^16.0.1"
   },
   "devDependencies": {

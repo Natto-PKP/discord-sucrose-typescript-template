@@ -32,10 +32,10 @@ export default <Form>{
     ],
   },
 
-  exec: ({ interaction }) => {
+  exec: async ({ interaction }) => {
     const reason = interaction.fields.getTextInputValue('report-reason');
     const args = interaction.fields.getTextInputValue('report-args');
 
-    interaction.reply(`Someone sent a report: ${reason}\n\`\`\`${args}\`\`\``);
+    await interaction.reply(`Someone sent a report: ${reason}\n\`\`\`${args}\`\`\``);
   },
 };
