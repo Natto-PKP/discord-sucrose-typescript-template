@@ -1,6 +1,7 @@
 import { inspect } from 'util';
 
 import type { ChatInput } from 'discord-sucrose';
+import { ApplicationCommandOptionType, ApplicationCommandType } from 'discord.js';
 
 const template = 'return async () => { const { commands, events } = sucrose; const { buttons, selectMenus } = sucrose.interactions; const { guild, member, user, channel } = interaction; return $code }';
 const minify = (str: string): string => (str.length > 1200 ? `${str.slice(0, 1197)}...` : str);
@@ -12,11 +13,11 @@ export default <ChatInput>{
 
   body: {
     name: 'eval',
-    type: 'CHAT_INPUT',
+    type: ApplicationCommandType.ChatInput,
     description: 'A command to code immediately',
     options: [{
       name: 'code',
-      type: 'STRING',
+      type: ApplicationCommandOptionType.String,
       description: 'Section of code to test',
       required: true,
     }],
@@ -30,10 +31,10 @@ export default <ChatInput>{
       const execute = Function('{ interaction, sucrose }', template.replace('$code', code))({ interaction, sucrose });
       const result = await execute();
 
-      await interaction.reply({ embeds: [{ color: '#c7e7c2', description: `\`\`\`js\n${minify(inspect(result, false, 2))}\`\`\`` }] });
+      await interaction.reply({ embeds: [{ color: 0xc7e7c2, description: `\`\`\`js\n${minify(inspect(result, false, 2))}\`\`\`` }] });
     } catch (err) {
       if (!(err instanceof Error)) return;
-      await interaction.reply({ embeds: [{ color: '#de3e3e', description: `\`\`\`js\n${minify(err.message)}\`\`\`` }] });
+      await interaction.reply({ embeds: [{ color: 0xde3e3e, description: `\`\`\`js\n${minify(err.message)}\`\`\`` }] });
     }
   },
 };

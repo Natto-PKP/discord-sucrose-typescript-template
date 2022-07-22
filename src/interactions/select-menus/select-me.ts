@@ -1,8 +1,9 @@
 import type { SelectMenu } from 'discord-sucrose';
+import { ComponentType } from 'discord.js';
 
 export default <SelectMenu>{
   data: {
-    type: 'SELECT_MENU',
+    type: ComponentType.SelectMenu,
     customId: 'select-me',
     placeholder: 'Select me !',
     options: [

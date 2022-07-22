@@ -1,10 +1,12 @@
+import { ButtonStyle, ComponentType } from 'discord.js';
 import type { Button } from 'discord-sucrose';
 
-export default <Button<'base'>>{
+export default <Button>{
   data: {
-    type: 'BUTTON',
-    customId: 'useme',
-    style: 'DANGER',
+    customId: 'use-me',
+    type: ComponentType.Button,
+    style: ButtonStyle.Primary,
+    label: 'use me',
   },
 
   exec: async ({ interaction }) => {
