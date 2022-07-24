@@ -1,7 +1,5 @@
-import type { EventHandler } from 'discord-sucrose';
+import type { EventHandlerParams } from 'discord-sucrose';
 
-const handler: EventHandler<'guildMemberAdd'> = ({ args: [member] }) => {
+export default ({ args: [member] }: EventHandlerParams<'guildMemberAdd'>) => {
   console.log(`${member.displayName} entered a guild`);
 };
-
-export default handler;

@@ -2,7 +2,7 @@ import { ButtonStyle, ComponentType } from 'discord.js';
 import type { Button } from 'discord-sucrose';
 
 export default <Button>{
-  data: {
+  body: {
     customId: 'use-me',
     type: ComponentType.Button,
     style: ButtonStyle.Primary,
