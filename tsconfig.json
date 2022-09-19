@@ -1,6 +1,6 @@
 {
-  "include": ["src/**/*", "src/commands/guilds/713172382042423352/games/typing.ts"],
-  "exclude": ["node_modules"],
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"],
 
   "compilerOptions": {
     //! Type Checking
@@ -46,10 +46,13 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "lib": ["ESNext"],
-    "target": "ESNext",
+    "target": "ES2021",
     "useDefineForClassFields": true,
 
     "pretty": false,
-    "skipDefaultLibCheck": true
+    "skipDefaultLibCheck": true,
+
+    //! tmp
+    "skipLibCheck": true
   }
 }
