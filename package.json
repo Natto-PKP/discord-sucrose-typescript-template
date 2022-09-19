@@ -3,7 +3,6 @@
   "private": true,
   "main": "dist/index.js",
   "scripts": {
-    "prepare": "husky install",
     "start": "ts-node ./src/index.ts",
     "build": "tsc"
   },
