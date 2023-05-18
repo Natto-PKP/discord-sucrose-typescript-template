@@ -3,7 +3,8 @@
   "private": true,
   "main": "dist/index.js",
   "scripts": {
-    "start": "ts-node ./src/index.ts",
+    "start": "node dist/index.js",
+    "dev": "nodemon",
     "build": "tsc"
   },
   "repository": {
@@ -16,9 +17,10 @@
   },
   "homepage": "https://github.com/Natto-PKP/discord-sucrose-typescript-template#readme",
   "dependencies": {
-    "discord-sucrose": "^7.0.0",
+    "discord-sucrose": "^7.0.1",
     "discord.js": "^14.8.0",
-    "dotenv": "^16.0.1"
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.22"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
