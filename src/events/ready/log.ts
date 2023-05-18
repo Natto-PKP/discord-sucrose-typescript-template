@@ -1,9 +1,11 @@
 import { Logger as SucroseLogger } from 'discord-sucrose';
-import type { EventHandlerParams } from 'discord-sucrose';
+import type { EventModule } from 'discord-sucrose';
 import Logger from '../../services/Logger';
 
-export default async ({ sucrose }: EventHandlerParams<'ready'>) => {
-  Logger.write(SucroseLogger.style("I'm connected", 'rainbow'));
+export default <EventModule<'ready'>>{
+  label: 'log',
 
-  await sucrose.commands.define('eval');
+  exec: () => {
+    Logger.give('INFO', SucroseLogger.style("I'm connected", 'rainbow'));
+  },
 };

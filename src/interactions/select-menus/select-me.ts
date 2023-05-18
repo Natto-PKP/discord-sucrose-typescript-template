@@ -3,7 +3,7 @@ import { ComponentType } from 'discord.js';
 
 export default <SelectMenu>{
   body: {
-    type: ComponentType.SelectMenu,
+    type: ComponentType.StringSelect,
     customId: 'select-me',
     placeholder: 'Select me !',
     options: [

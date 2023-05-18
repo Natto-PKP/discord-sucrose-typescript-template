@@ -3,6 +3,8 @@
   "exclude": ["node_modules", "dist"],
 
   "compilerOptions": {
+    "ignoreDeprecations": "5.0",
+
     //! Type Checking
     "alwaysStrict": true,
     "allowUnreachableCode": false,
