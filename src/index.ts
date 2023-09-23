@@ -1,14 +1,14 @@
-import { Sucrose } from 'discord-sucrose';
-import { GatewayIntentBits, Partials } from 'discord.js';
 import dotenv from 'dotenv';
-
-import Cooldown from './services/Cooldown';
+import client from './client';
 
 dotenv.config();
 
-Sucrose.build({
-  env: { ext: 'ts', source: 'src' },
-  intents: [GatewayIntentBits.Guilds],
-  partials: [Partials.Channel],
-  cooldown: Cooldown,
-});
+/**
+ * Get discord bot token from environment variables.
+ */
+const TOKEN = process.env['BOT_TOKEN'] || process.env['DISCORD_TOKEN'] || process.env['TOKEN'];
+
+/**
+ * Login to discord with the bot token.
+ */
+client.login(TOKEN);

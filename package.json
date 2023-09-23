@@ -17,10 +17,9 @@
   },
   "homepage": "https://github.com/Natto-PKP/discord-sucrose-typescript-template#readme",
   "dependencies": {
-    "discord-sucrose": "^7.0.1",
-    "discord.js": "^14.8.0",
-    "dotenv": "^16.0.1",
-    "nodemon": "^2.0.22"
+    "discord-sucrose": "^8.0.0-dev.7dqqnpLK",
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
@@ -31,9 +30,11 @@
     "eslint": "^8.17.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-plugin-import": "^2.28.1",
     "husky": "^8.0.1",
+    "nodemon": "^3.0.1",
     "prettier": "^2.6.2",
-    "ts-node": "^10.8.1",
-    "typescript": "^4.7.3"
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
   }
 }
